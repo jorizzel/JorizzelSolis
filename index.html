@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY WEBSITE</title>
+</head>
+<style>
+    .typewriter {
+	 --blue: #5c86ff;
+	 --blue-dark: #275efe;
+	 --key: #fff;
+	 --paper: #eef0fd;
+	 --text: #d3d4ec;
+	 --tool: #fbc56c;
+	 --duration: 3s;
+	 position: relative;
+	 animation: bounce var(--duration) linear infinite;
+}
+ .typewriter .slide {
+	 width: 92px;
+	 height: 20px;
+	 border-radius: 3px;
+	 margin-left: 14px;
+	 transform: translateX(14px);
+	 background: linear-gradient(var(--blue), var(--blue-dark));
+	 animation: slide var(--duration) ease infinite;
+}
+ .typewriter .slide:before, .typewriter .slide:after, .typewriter .slide i:before {
+	 content: '';
+	 position: absolute;
+	 background: var(--tool);
+}
+ .typewriter .slide:before {
+	 width: 2px;
+	 height: 8px;
+	 top: 6px;
+	 left: 100%;
+}
+ .typewriter .slide:after {
+	 left: 94px;
+	 top: 3px;
+	 height: 14px;
+	 width: 6px;
+	 border-radius: 3px;
+}
+ .typewriter .slide i {
+	 display: block;
+	 position: absolute;
+	 right: 100%;
+	 width: 6px;
+	 height: 4px;
+	 top: 4px;
+	 background: var(--tool);
+}
+ .typewriter .slide i:before {
+	 right: 100%;
+	 top: -2px;
+	 width: 4px;
+	 border-radius: 2px;
+	 height: 14px;
+}
+ .typewriter .paper {
+	 position: absolute;
+	 left: 24px;
+	 top: -26px;
+	 width: 40px;
+	 height: 46px;
+	 border-radius: 5px;
+	 background: var(--paper);
+	 transform: translateY(46px);
+	 animation: paper var(--duration) linear infinite;
+}
+ .typewriter .paper:before {
+	 content: '';
+	 position: absolute;
+	 left: 6px;
+	 right: 6px;
+	 top: 7px;
+	 border-radius: 2px;
+	 height: 4px;
+	 transform: scaleY(0.8);
+	 background: var(--text);
+	 box-shadow: 0 12px 0 var(--text), 0 24px 0 var(--text), 0 36px 0 var(--text);
+}
+ .typewriter .keyboard {
+	 width: 120px;
+	 height: 56px;
+	 margin-top: -10px;
+	 z-index: 1;
+	 position: relative;
+}
+ .typewriter .keyboard:before, .typewriter .keyboard:after {
+	 content: '';
+	 position: absolute;
+}
+ .typewriter .keyboard:before {
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 border-radius: 7px;
+	 background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+	 transform: perspective(10px) rotateX(2deg);
+	 transform-origin: 50% 100%;
+}
+ .typewriter .keyboard:after {
+	 left: 2px;
+	 top: 25px;
+	 width: 11px;
+	 height: 4px;
+	 border-radius: 2px;
+	 box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+	 animation: keyboard var(--duration) linear infinite;
+}
+ @keyframes bounce {
+	 85%, 92%, 100% {
+		 transform: translateY(0);
+	}
+	 89% {
+		 transform: translateY(-4px);
+	}
+	 95% {
+		 transform: translateY(2px);
+	}
+}
+ @keyframes slide {
+	 5% {
+		 transform: translateX(14px);
+	}
+	 15%, 30% {
+		 transform: translateX(6px);
+	}
+	 40%, 55% {
+		 transform: translateX(0);
+	}
+	 65%, 70% {
+		 transform: translateX(-4px);
+	}
+	 80%, 89% {
+		 transform: translateX(-12px);
+	}
+	 100% {
+		 transform: translateX(14px);
+	}
+}
+ @keyframes paper {
+	 5% {
+		 transform: translateY(46px);
+	}
+	 20%, 30% {
+		 transform: translateY(34px);
+	}
+	 40%, 55% {
+		 transform: translateY(22px);
+	}
+	 65%, 70% {
+		 transform: translateY(10px);
+	}
+	 80%, 85% {
+		 transform: translateY(0);
+	}
+	 92%, 100% {
+		 transform: translateY(46px);
+	}
+}
+ @keyframes keyboard {
+	 5%, 12%, 21%, 30%, 39%, 48%, 57%, 66%, 75%, 84% {
+		 box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+	}
+	 9% {
+		 box-shadow: 15px 2px 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+	}
+	 18% {
+		 box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 2px 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+	}
+	 27% {
+		 box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 12px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+	}
+	 36% {
+		 box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 12px 0 var(--key), 60px 12px 0 var(--key), 68px 12px 0 var(--key), 83px 10px 0 var(--key);
+	}
+	 45% {
+		 box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 2px 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+	}
+	 54% {
+		 box-shadow: 15px 0 0 var(--key), 30px 2px 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+	}
+	 63% {
+		 box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 12px 0 var(--key);
+	}
+	 72% {
+		 box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 2px 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+	}
+	 81% {
+		 box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 12px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+	}
+}
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgb(240, 87, 176) 0%, rgb(197, 104, 147) 50%, #e6c3dd 100%);
+    font-family: 'Roboto', Arial;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+    animation: rotateBackground 10s linear infinite;
+}
+
+@keyframes rotateBackground {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.typed-text {
+    color: white;
+    font-size: 45px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+}
+
+#cursor {
+    animation: blink-animation 0.7s infinite alternate;
+}
+
+@keyframes blink-animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+a.enter-button {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #275efe;
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+a.enter-button:hover {
+    background-color: #275efe;
+    color: white;
+    border-color: black;
+}
+
+a.enter-button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+a.enter-button:hover::before {
+    opacity: 1;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.typewriter {
+    --blue: rgb(221, 6, 6);
+    --blue-dark: #275efe;
+    --key: #fff;
+    --paper: #eef0fd;
+    --text: #d3d4ec;
+    --tool: #fbc56c;
+    --duration: 3s;
+    position: relative;
+    animation: bounce var(--duration) linear infinite;
+}
+
+.typewriter .slide {
+    width: 92px;
+    height: 20px;
+    border-radius: 3px;
+    margin-left: 14px;
+    transform: translateX(14px);
+    background: linear-gradient(var(--blue), var(--blue-dark));
+    animation: slide var(--duration) ease infinite;
+}
+
+.typewriter .slide:before, .typewriter .slide:after, .typewriter .slide i:before {
+    content: '';
+    position: absolute;
+    background: var(--tool);
+}
+
+.typewriter .slide:before {
+    width: 2px;
+    height: 8px;
+    top: 6px;
+    left: 100%;
+}
+
+.typewriter .slide:after {
+    left: 94px;
+    top: 3px;
+    height: 14px;
+    width: 6px;
+    border-radius: 3px;
+}
+
+.typewriter .slide i {
+    display: block;
+    position: absolute;
+    right: 100%;
+    width: 6px;
+    height: 4px;
+    top: 4px;
+    background: var(--tool);
+}
+
+.typewriter .slide i:before {
+    right: 100%;
+    top: -2px;
+    width: 4px;
+    border-radius: 2px;
+    height: 14px;
+}
+
+.typewriter .paper {
+    position: absolute;
+    left: 24px;
+    top: -26px;
+    width: 40px;
+    height: 46px;
+    border-radius: 5px;
+    background: var(--paper);
+    transform: translateY(46px);
+    animation: paper var(--duration) linear infinite;
+}
+
+.typewriter .paper:before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    top: 7px;
+    border-radius: 2px;
+    height: 4px;
+    transform: scaleY(0.8);
+    background: var(--text);
+    box-shadow: 0 12px 0 var(--text), 0 24px 0 var(--text), 0 36px 0 var(--text);
+}
+
+.typewriter .keyboard {
+    width: 120px;
+    height: 56px;
+    margin-top: -10px;
+    z-index: 1;
+    position: relative;
+}
+
+.typewriter .keyboard:before, .typewriter .keyboard:after {
+    content: '';
+    position: absolute;
+}
+
+.typewriter .keyboard:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    transform: perspective(10px) rotateX(2deg);
+    transform-origin: 50% 100%;
+}
+
+.typewriter .keyboard:after {
+    left: 2px;
+    top: 25px;
+    width: 11px;
+    height: 4px;
+    border-radius: 2px;
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    animation: keyboard var(--duration) linear infinite;
+}
+
+@keyframes bounce {
+    85%, 92%, 100% {
+        transform: translateY(0);
+    }
+    89% {
+        transform: translateY(-4px);
+    }
+    95% {
+        transform: translateY(2px);
+    }
+}
+
+@keyframes slide {
+    5% {
+        transform: translateX(14px);
+    }
+    15%, 30% {
+        transform: translateX(6px);
+    }
+    40%, 55% {
+        transform: translateX(0);
+    }
+    65%, 70% {
+        transform: translateX(-4px);
+    }
+    80%, 89% {
+        transform: translateX(-12px);
+    }
+    100% {
+        transform: translateX(14px);
+    }
+}
+
+@keyframes paper {
+    5% {
+        transform: translateY(46px);
+    }
+    20%, 30% {
+        transform: translateY(34px);
+    }
+    40%, 55% {
+        transform: translateY(22px);
+    }
+    65%, 70% {
+        transform: translateY(10px);
+    }
+    80%, 85% {
+        transform: translateY(0);
+    }
+    92%, 100% {
+        transform: translateY(46px);
+    }
+}
+
+@keyframes keyboard {
+    5%, 12%, 21%, 30%, 39%, 48%, 57%, 66%, 75%, 84% {
+        box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+    10%, 20%, 29%, 38%, 47%, 56%, 65%, 74%, 83%, 100% {
+        box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key);
+    }
+}
+@media (max-width: 768px) {
+            .typed-text {
+                font-size: 42px;
+                top: 15%;
+            }
+            .enter-button {
+                font-size: 20px;
+                top: 50%;
+                padding: 8px 16px;
+            }
+            .typewriter {
+                transform: scale(0.8);
+                bottom: 15%;
+            }
+        }
+@media (max-width: 480px) {
+            .typed-text {
+                font-size: 35px;
+                top: 10%;
+            }
+            .enter-button {
+                font-size: 16px;
+                top: 40%;
+                padding: 6px 12px;
+            }
+            .typewriter {
+                transform: scale(0.6);
+                bottom: 20%;
+            }
+        }
+</style>
+<body>
+    <div class="typed-text" style="position: absolute; text-align: center;">
+        <span id="text"></span><span id="cursor">|</span>
+    </div>
+      <script>
+        const text = "JORIZZEL PERSONAL WEBSITE";
+let index = 0;
+
+function type() {
+  document.getElementById("text").innerText += text[index];
+  index++;
+  
+  if (index < text.length) {
+    setTimeout(type, 150);
+  }
+}
+
+type();
+      </script>
+	  <a href="main.index.html" class="enter-button" style="text-align: center; top: 35%; position: absolute; text-decoration: none; border: 2px solid black; padding: 5px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">ENTER</a>
+    <div class="typewriter">
+        <div class="slide"><i></i></div>
+        <div class="paper"></div>
+        <div class="keyboard"></div>
+    </div>
+    <a class="dribbble" href="https://dribbble.com/shots/8184246-Typewriter" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
+</body>
+</html>
